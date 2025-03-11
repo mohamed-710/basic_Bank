@@ -2,26 +2,46 @@
 
 ![Banner](./public/banner.png)
 
+## **Screenshots** 📸
+
+### **Home Page**
+![Home Page](./public/p1.jpg)
+
+### **Transfer Money**
+![Transfer Money](./public/p2.jpg)
+
+### **Transaction History**
+![Transaction History](./public/p3.jpg)
+
+### **Profile Management**
+![Profile Management](./public/p4.jpg)
 
 This project is a **RESTful API** for a simple banking system. It allows users to **sign up**, **log in**, **manage their profiles**, **check balances**, **transfer money**, and **view transaction history**. The API is built using **Node.js**, **Express**, and **MongoDB**, with **JWT** for authentication.
 
 ---
 
 ## **Features** ✨
-1. **User Authentication** 🔐:
-   - Sign up with email, password, and name. 📝
-   - Log in with email and password. 🔑
-   - Log out by clearing the JWT token. 🚪
 
-2. **Bank Account Management** 💳:
-   - Automatically create a bank account with a default balance of **10,000** upon signup. 💰
-   - Check account balance. 📊
-   - Transfer money to another user using their email. 💸
-   - View transaction history with pagination. 📜
+### **1. User Authentication** 🔐
+- Sign up with email, password, and name. 📝
+- Log in with email and password. 🔑
+- Log out by clearing the JWT token. 🚪
 
-3. **Profile Management** 👤:
-   - View user profile (name, email, balance). 📋
-   - Update profile (name and password). 🔄
+![Login Page](./public/p2.jpg)
+
+### **2. Bank Account Management** 💳
+- Automatically create a bank account with a default balance of **10,000** upon signup. 💰
+- Check account balance. 📊
+- Transfer money to another user using their email. 💸
+- View transaction history with pagination. 📜
+
+![Transaction History](./public/p3.jpg)
+
+### **3. Profile Management** 👤
+- View user profile (name, email, balance). 📋
+- Update profile (name and password). 🔄
+
+![Profile Management](./public/p4.jpg)
 
 4. **Security** 🛡️:
    - Passwords are hashed using **bcrypt**. 🔒
