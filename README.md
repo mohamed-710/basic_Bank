@@ -118,7 +118,7 @@ This project is a **RESTful API** for a simple banking system. It allows users t
    ```
 2. Navigate to the project directory:
    ```bash
-   cd <project-folder>
+   cd backend
    ```
 3. Install dependencies:
    ```bash
@@ -126,7 +126,7 @@ This project is a **RESTful API** for a simple banking system. It allows users t
    ```
 4. Start the server:
    ```bash
-   npm start
+   npm run dev
    ```
 
 ---
