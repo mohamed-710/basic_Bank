@@ -5,13 +5,13 @@
 ## **Screenshots** 📸
 
 ### **Home Page**
-![Home Page](./public/p1.jpg)
+![Home Page](./public/p5.jpg)
 
 ### **Transfer Money**
 ![Transfer Money](./public/p2.jpg)
 
 ### **Transaction History**
-![Transaction History](./public/p3.jpg)
+![Transaction History](./public/p6.jpg)
 
 ### **Profile Management**
 ![Profile Management](./public/p4.jpg)
