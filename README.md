@@ -1,5 +1,6 @@
 # **Banking System API** 🏦💻
 
+
 This project is a **RESTful API** for a simple banking system. It allows users to **sign up**, **log in**, **manage their profiles**, **check balances**, **transfer money**, and **view transaction history**. The API is built using **Node.js**, **Express**, and **MongoDB**, with **JWT** for authentication.
 
 ---
@@ -28,10 +29,26 @@ This project is a **RESTful API** for a simple banking system. It allows users t
 ---
 
 ## **Technologies Used** 🛠️
-- **Backend**: Node.js, Express 🖥️
+
+### **Frontend**
+- **Framework**: React 🖥️
+- **Routing**: React Router DOM 🗺️
+- **State Management**: React Hooks 🪝
+- **Styling**: Bootstrap 🎨
+- **Toast Notifications**: React Toastify 🔔
+- **Cookie Management**: js-cookie 🍪
+
+### **Backend**
+- **Runtime**: Node.js 🖥️
+- **Framework**: Express 🚀
 - **Database**: MongoDB 🗄️
 - **Authentication**: JWT (JSON Web Tokens) 🔑
 - **Password Hashing**: bcrypt 🔐
+
+### **Development Tools**
+- **Bundler**: Vite ⚡
+- **Linting**: ESLint 📏
+- **Environment Management**: dotenv 🔧
 
 ---
 
