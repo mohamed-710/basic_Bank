@@ -1,43 +1,43 @@
-# **Banking System API**
+# **Banking System API** 🏦💻
 
 This project is a **RESTful API** for a simple banking system. It allows users to **sign up**, **log in**, **manage their profiles**, **check balances**, **transfer money**, and **view transaction history**. The API is built using **Node.js**, **Express**, and **MongoDB**, with **JWT** for authentication.
 
 ---
 
-## **Features**
-1. **User Authentication**:
-   - Sign up with email, password, and name.
-   - Log in with email and password.
-   - Log out by clearing the JWT token.
+## **Features** ✨
+1. **User Authentication** 🔐:
+   - Sign up with email, password, and name. 📝
+   - Log in with email and password. 🔑
+   - Log out by clearing the JWT token. 🚪
 
-2. **Bank Account Management**:
-   - Automatically create a bank account with a default balance of **10,000** upon signup.
-   - Check account balance.
-   - Transfer money to another user using their email.
-   - View transaction history with pagination.
+2. **Bank Account Management** 💳:
+   - Automatically create a bank account with a default balance of **10,000** upon signup. 💰
+   - Check account balance. 📊
+   - Transfer money to another user using their email. 💸
+   - View transaction history with pagination. 📜
 
-3. **Profile Management**:
-   - View user profile (name, email, balance).
-   - Update profile (name and password).
+3. **Profile Management** 👤:
+   - View user profile (name, email, balance). 📋
+   - Update profile (name and password). 🔄
 
-4. **Security**:
-   - Passwords are hashed using **bcrypt**.
-   - JWT tokens are used for secure authentication.
-   - Cookies are used to store tokens securely.
-
----
-
-## **Technologies Used**
-- **Backend**: Node.js, Express
-- **Database**: MongoDB
-- **Authentication**: JWT (JSON Web Tokens)
-- **Password Hashing**: bcrypt
+4. **Security** 🛡️:
+   - Passwords are hashed using **bcrypt**. 🔒
+   - JWT tokens are used for secure authentication. 🔐
+   - Cookies are used to store tokens securely. 🍪
 
 ---
 
-## **API Endpoints**
+## **Technologies Used** 🛠️
+- **Backend**: Node.js, Express 🖥️
+- **Database**: MongoDB 🗄️
+- **Authentication**: JWT (JSON Web Tokens) 🔑
+- **Password Hashing**: bcrypt 🔐
 
-### **Authentication**
+---
+
+## **API Endpoints** 🌐
+
+### **Authentication** 🔐
 | **Endpoint**       | **Method** | **Description**                          | **Request Body**                                                                 |
 |---------------------|------------|------------------------------------------|----------------------------------------------------------------------------------|
 | `/api/auth/signup`  | POST       | Register a new user                      | `{ "email": "user@example.com", "password": "password123", "name": "John Doe" }` |
@@ -46,7 +46,7 @@ This project is a **RESTful API** for a simple banking system. It allows users t
 
 ---
 
-### **Bank Account**
+### **Bank Account** 💳
 | **Endpoint**               | **Method** | **Description**                          | **Request Body**                                                                 |
 |-----------------------------|------------|------------------------------------------|----------------------------------------------------------------------------------|
 | `/api/bank/balance`         | GET        | Get the user's account balance           | None                                                                             |
@@ -55,7 +55,7 @@ This project is a **RESTful API** for a simple banking system. It allows users t
 
 ---
 
-### **Profile Management**
+### **Profile Management** 👤
 | **Endpoint**               | **Method** | **Description**                          | **Request Body**                                                                 |
 |-----------------------------|------------|------------------------------------------|----------------------------------------------------------------------------------|
 | `/api/Manage/profile`       | GET        | Get user profile details                 | None                                                                             |
@@ -63,11 +63,11 @@ This project is a **RESTful API** for a simple banking system. It allows users t
 
 ---
 
-## **How to Run the Project**
+## **How to Run the Project** 🚀
 
-### **Prerequisites**
-1. Install **Node.js** and **npm**.
-2. Install **MongoDB** (local or cloud-based).
+### **Prerequisites** 📋
+1. Install **Node.js** and **npm**. 📥
+2. Install **MongoDB** (local or cloud-based). 🗄️
 3. Create a `.env` file in the root directory with the following variables:
    ```plaintext
    MONGO_URI=add Database URI
@@ -76,7 +76,7 @@ This project is a **RESTful API** for a simple banking system. It allows users t
    NODE_ENV=development
    ```
 
-### **Steps**
+### **Steps** 🛠️
 1. Clone the repository:
    ```bash
    git clone <repository-url>
@@ -96,7 +96,7 @@ This project is a **RESTful API** for a simple banking system. It allows users t
 
 ---
 
-## **Security Features**
-- **Password Hashing**: Passwords are hashed using bcrypt before saving to the database.
-- **JWT Authentication**: Tokens are signed with a secret key and expire after 7 days.
-- **Secure Cookies**: Tokens are stored in HTTP-only cookies for enhanced security.
+## **Security Features** 🛡️
+- **Password Hashing**: Passwords are hashed using bcrypt before saving to the database. 🔒
+- **JWT Authentication**: Tokens are signed with a secret key and expire after 7 days. 🔐
+- **Secure Cookies**: Tokens are stored in HTTP-only cookies for enhanced security. 🍪
