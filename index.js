@@ -11,6 +11,7 @@ import errorHandler from './middleware/errorHandler.js';
 import bankRoutes from "./routes/bankRoutes.js";
 
 import cookieParser from 'cookie-parser';
+
 import userRoute from "./routes/userRoute.js"
 
 import cors from 'cors';
