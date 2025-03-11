@@ -4,9 +4,6 @@
 
 ## **Screenshots** 📸
 
-### **Home Page**
-![Home Page](./public/p5.jpg)
-
 ### **Transfer Money**
 ![Transfer Money](./public/p2.jpg)
 
