@@ -41,6 +41,6 @@ app.use(errorHandler);
 
 
 app.listen(port, () => {
-    connectDB(); 
-  console.log(`App listening on port ${port}`);
+  connectDB(); 
+console.log(`App listening on port ${port}`);
 });
