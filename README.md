@@ -27,7 +27,7 @@ This project is a **RESTful API** for a simple banking system. It allows users t
 - Log in with email and password. 🔑
 - Log out by clearing the JWT token. 🚪
 
-![Login Page](./public/p2.jpg)
+
 
 ### **2. Bank Account Management** 💳
 - Automatically create a bank account with a default balance of **10,000** upon signup. 💰
@@ -35,13 +35,12 @@ This project is a **RESTful API** for a simple banking system. It allows users t
 - Transfer money to another user using their email. 💸
 - View transaction history with pagination. 📜
 
-![Transaction History](./public/p3.jpg)
 
 ### **3. Profile Management** 👤
 - View user profile (name, email, balance). 📋
 - Update profile (name and password). 🔄
 
-![Profile Management](./public/p4.jpg)
+
 
 4. **Security** 🛡️:
    - Passwords are hashed using **bcrypt**. 🔒
