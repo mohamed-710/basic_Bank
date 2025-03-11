@@ -11,6 +11,7 @@ import errorHandler from './middleware/errorHandler.js';
 import bankRoutes from "./routes/bankRoutes.js";
 
 import cookieParser from 'cookie-parser';
+import userRoute from "./routes/userRoute.js"
 
 import cors from 'cors';
 
@@ -32,6 +33,9 @@ app.use(cors({
 app.use("/api/auth", authRoutes);
 
 app.use("/api/bank", bankRoutes);
+
+app.use("/api/Manage", userRoute);
+
 
 app.use(errorHandler);
 

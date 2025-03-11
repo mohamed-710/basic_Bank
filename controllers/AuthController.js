@@ -11,19 +11,19 @@ const signup = async (req, res) => {
         const { email, password, name } = req.body;
 
         if (!email || !password || !name) {
-            return res.status(400).json({ message: "البيانات مطلوبة" });
+            return res.status(400).json({ statusCode: 400, message: "All fields are required." });
         }
 
         const userAlreadyExists = await User.findOne({ email });
         if (userAlreadyExists) {
-            return res.status(400).json({ message: "البريد الإلكتروني موجود بالفعل" });
+            return res.status(400).json({ statusCode: 400, message: "Email already exists." });
         }
 
         const newUser = new User({ email, password, name });
         await newUser.save();
         const bankAccount = new BankAccount({
             user: newUser._id,
-            balance:10000, 
+            balance: 10000, 
         });
         await bankAccount.save();
 
@@ -36,15 +36,16 @@ const signup = async (req, res) => {
         });
 
         res.status(201).json({
-            message: "تم التسجيل بنجاح",
+            statusCode: 201,
+            message: "Signup successful.",
             user: { 
-                name:newUser.name,
-                email:newUser.email,
+                name: newUser.name,
+                email: newUser.email,
                 password: undefined,
-             }
+            }
         });
     } catch (error) {
-        res.status(500).json({ message: "خطأ في السيرفر", error: error.message });
+        res.status(500).json({ statusCode: 500, message: "Server error.", error: error.message });
     }
 };
 
@@ -52,12 +53,12 @@ const login = async (req, res) => {
     try {
         const { email, password } = req.body;
         if (!email || !password) {
-            return res.status(400).json({ message: "البريد الإلكتروني وكلمة المرور مطلوبان" });
+            return res.status(400).json({ statusCode: 400, message: "Email and password are required." });
         }
 
         const user = await User.findOne({ email });
         if (!user || !(await user.checkPassword(password))) {
-            return res.status(400).json({ message: "البريد الإلكتروني أو كلمة المرور غير صحيحة" });
+            return res.status(400).json({ statusCode: 400, message: "Invalid email or password." });
         }
 
         const token = generateJwt(user._id);
@@ -69,20 +70,21 @@ const login = async (req, res) => {
         });
 
         res.status(200).json({
-            message: "تم تسجيل الدخول بنجاح",
-            user: { ...user._doc, password: undefined,token },
+            statusCode: 200,
+            message: "Login successful.",
+            user: { ...user._doc, password: undefined, token },
         });
     } catch (error) {
-        res.status(500).json({ message: "خطأ في السيرفر", error: error.message });
+        res.status(500).json({ statusCode: 500, message: "Server error.", error: error.message });
     }
 };
 
 const logout = (req, res) => {
     try {
         res.clearCookie("token");
-        res.status(200).json({ message: "تم تسجيل الخروج بنجاح" });
+        res.status(200).json({ statusCode: 200, message: "Logout successful." });
     } catch (error) {
-        res.status(500).json({ message: "خطأ في السيرفر", error: error.message });
+        res.status(500).json({ statusCode: 500, message: "Server error.", error: error.message });
     }
 };
 

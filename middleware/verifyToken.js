@@ -8,17 +8,17 @@ export const verifyToken = async (req, res, next) => {
             token = req.headers.authorization.split(" ")[1];
 
             const decoded = jwt.verify(token, process.env.JWT_SECRET);
-            req.user = await User.findById(decoded.userId).select("-password"); // البحث عن المستخدم بدون كلمة المرور
+            req.user = await User.findById(decoded.userId).select("-password"); 
 
             if (!req.user) {
-                return res.status(404).json({ message: "المستخدم غير موجود" });
+                return res.status(404).json({ statusCode: 404, message: "User not found." });
             }
 
             next();
         } else {
-            res.status(401).json({ message: "غير مصرح لك" });
+            res.status(401).json({ statusCode: 401, message: "Unauthorized access." });
         }
     } catch (error) {
-        res.status(401).json({ message: "توكن غير صالح" });
+        res.status(401).json({ statusCode: 401, message: "Invalid token." });
     }
 };
